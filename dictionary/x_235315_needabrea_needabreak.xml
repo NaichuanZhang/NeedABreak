@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="NeedaBreak" max_length="40" name="x_235315_needabrea_needabreak" type="collection">
+        <element label="Requested End Time" mandatory="true" max_length="40" name="u_requested_end" type="glide_date_time"/>
+        <element label="Requested For" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element label="Requested Start Time" mandatory="true" max_length="40" name="u_requested_start" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Vacation Type" mandatory="true" max_length="40" name="u_vacation_type" type="string">
+            <choice>
+                <element label="Normal" sequence="0" value="normal"/>
+                <element label="Emergency" sequence="1" value="emergency"/>
+                <element label="Holiday" sequence="2" value="holiday"/>
+            </choice>
+        </element>
+    </element>
+</database>

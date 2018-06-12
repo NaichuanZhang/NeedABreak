@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Populate the user field when initiate new record.</description>
+        <field>active</field>
+        <global>true</global>
+        <messages/>
+        <name>Default User for New Record</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	if(g_form.isNewRecord()){
+		g_form.setValue('u_requested_for', g_user.userID);
+	}
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-12 22:45:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a0b0171bdba21300f5dcaab35b961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Default User for New Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>sys_script_client_a0b0171bdba21300f5dcaab35b961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-12 22:45:06</sys_updated_on>
+        <table>x_235315_needabrea_needabreak</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
