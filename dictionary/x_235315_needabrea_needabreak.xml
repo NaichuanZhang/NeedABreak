@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="NeedaBreak" max_length="40" name="x_235315_needabrea_needabreak" type="collection">
+    <element extends="task" label="NeedaBreak" max_length="40" name="x_235315_needabrea_needabreak" sizeclass="2" type="collection">
         <element label="Requested End Time" mandatory="true" max_length="40" name="u_requested_end" type="glide_date_time"/>
         <element label="Requested For" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element label="Requested Start Time" mandatory="true" max_length="40" name="u_requested_start" type="glide_date_time"/>
