@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_view">
+    <sys_ui_view action="INSERT_OR_UPDATE">
+        <group/>
+        <hidden>false</hidden>
+        <name>User_View</name>
+        <roles/>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-13 20:58:05</sys_created_on>
+        <sys_id>70540cb3dbe21300f5dcaab35b96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User View</sys_name>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>sys_ui_view_70540cb3dbe21300f5dcaab35b96196a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-13 20:58:05</sys_updated_on>
+        <title>User View</title>
+        <user/>
+    </sys_ui_view>
+</record_update>

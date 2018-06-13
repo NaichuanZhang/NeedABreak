@@ -5,22 +5,22 @@
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
         <condition/>
-        <description>Default access control on x_235315_needabrea_needabreak</description>
-        <name>x_235315_needabrea_needabreak</name>
-        <operation display_value="read">read</operation>
+        <description>Default access control on x_235315_needabrea_vacation_record</description>
+        <name>x_235315_needabrea_vacation_record</name>
+        <operation display_value="delete">delete</operation>
         <script/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-06-12 20:07:25</sys_created_on>
-        <sys_id>012fee57db621300f5dcaab35b96196e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>x_235315_needabrea_needabreak</sys_name>
+        <sys_created_on>2018-06-13 18:28:00</sys_created_on>
+        <sys_id>16f1e36fdb621300f5dcaab35b961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_235315_needabrea_vacation_record</sys_name>
         <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
-        <sys_update_name>sys_security_acl_012fee57db621300f5dcaab35b96196e</sys_update_name>
+        <sys_update_name>sys_security_acl_16f1e36fdb621300f5dcaab35b961948</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-06-13 21:47:20</sys_updated_on>
+        <sys_updated_on>2018-06-13 18:28:00</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

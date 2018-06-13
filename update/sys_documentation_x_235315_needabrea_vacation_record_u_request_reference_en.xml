@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_request_reference" label="Reference to Request" language="en" table="x_235315_needabrea_vacation_record">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_request_reference</element>
+            <help/>
+            <hint/>
+            <label>Reference to Request</label>
+            <language>en</language>
+            <name>x_235315_needabrea_vacation_record</name>
+            <plural>Reference to Requests</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-13 18:38:02</sys_created_on>
+            <sys_id>91446fafdb621300f5dcaab35b961997</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Reference to Request</sys_name>
+            <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+            <sys_update_name>sys_documentation_x_235315_needabrea_vacation_record_u_request_reference_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-13 19:46:32</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

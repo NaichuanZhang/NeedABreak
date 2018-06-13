@@ -7,36 +7,36 @@
         <content_page/>
         <device_type/>
         <filter/>
-        <hint>Create a vacation request record in the needabreak table</hint>
+        <hint/>
         <homepage/>
         <image/>
-        <link_type>NEW</link_type>
+        <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>Create New Request</mobile_title>
+        <mobile_title>Vacation Approval</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_235315_needabrea_needabreak</name>
-        <order>100</order>
+        <name>x_235315_needabrea_vacation_record</name>
+        <order>300</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_235315_needabrea.needabreak_user</roles>
+        <roles>x_235315_needabrea.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-06-12 20:59:56</sys_created_on>
+        <sys_created_on>2018-06-13 20:15:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>041ab21fdb621300f5dcaab35b96192f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Create New Request</sys_name>
+        <sys_id>683ab3ebdba21300f5dcaab35b9619d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Vacation Approval</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
-        <sys_update_name>sys_app_module_041ab21fdb621300f5dcaab35b96192f</sys_update_name>
+        <sys_update_name>sys_app_module_683ab3ebdba21300f5dcaab35b9619d5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-06-13 21:00:44</sys_updated_on>
+        <sys_updated_on>2018-06-13 20:15:31</sys_updated_on>
         <timeline_page/>
-        <title>Create New Request</title>
+        <title>Vacation Approval</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>
