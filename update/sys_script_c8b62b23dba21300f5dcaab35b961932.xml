@@ -32,14 +32,32 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	// Add your code here
+	//init glide record for vacation record table
 	var grVR = new GlideRecord('x_235315_needabrea_vacation_record');
 	grVR.initialize();
+	//init glide record for approval records
+	var grAPV = new GlideRecord('sysapproval_approver');
+	
+	//get approver 
+	grAPV.addQuery('sysapproval', current.sys_id);
+	grAPV.query();
+	//populate the fields
+	var comments = "";
+	if(grAPV.next()){
+		//approver 
+		grVR.approver = grAPV.approver;
+		comments += "Approval Comments: from " + grAPV.approver.name + "\n" + grAPV.comments.getJournalEntry(-1) + "\n";
+	}
+	
+	grVR.comments = comments;
 	grVR.start_time = current.u_requested_start;
 	grVR.u_user = current.u_requested_for;
 	grVR.end_time = current.u_requested_end;
 	grVR.u_string_4 = current.u_vacation_type;
 	grVR.u_request_reference = current.sys_id;
+	// calculate time off duration 
+	grVR.duration = GlideDateTime.subtract(GlideDateTime(grVR.start_time), GlideDateTime(grVR.end_time));
+	
 	grVR.insert();
 	
 	
@@ -50,7 +68,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c8b62b23dba21300f5dcaab35b961932</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Insert to Vacation Record after complete</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
@@ -58,7 +76,7 @@
         <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
         <sys_update_name>sys_script_c8b62b23dba21300f5dcaab35b961932</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-06-13 22:09:17</sys_updated_on>
+        <sys_updated_on>2018-06-14 18:05:42</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
