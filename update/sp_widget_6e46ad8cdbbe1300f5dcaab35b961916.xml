@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($scope, spUIActionsExecuter, spUtil) {
+	var c = this;
+	
+	var ESIGNATURE = {
+		"approved": "cbfe291147220100ba13a5554ee4904d",
+		"rejected": "580f711147220100ba13a5554ee4904b"
+	};
+	
+	spUtil.recordWatch($scope, "sysapproval_approver", "state=requested^sys_id="+ c.data.sys_id);
+
+	c.action = function(state) {
+		if(c.data.esignature.e_sig_required) {
+			var requestParams = {
+				username: c.data.esignature.username,
+				userSysId: c.data.esignature.userSysId
+			};
+			spUIActionsExecuter.executeFormAction(ESIGNATURE[state], "sysapproval_approver" , c.data.sys_id, [] , "", requestParams).then(function(response) {
+				});
+		} else {
+				c.data.op = state;
+				c.data.state = state;
+				c.server.update();
+		}
+	}	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.question {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.spacer {
+  display:inline-block;
+  width:5%;
+}
+
+.btn-question {
+	width: 45%;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+  "data": {
+    "fields": [
+      {
+        "type": "glide_date_time",
+        "value": "2016-01-31T17:33:54+00:00",
+        "label": "Approval Example Label"
+      }
+    ],
+    "state": "requested",
+    "label": "incident"
+  },
+  "options": {
+    "color": "default"
+  }
+}</demo_data>
+        <description/>
+        <docs/>
+        <field_list>color</field_list>
+        <has_preview>true</has_preview>
+        <id>nab_approvalinfo</id>
+        <internal>false</internal>
+        <link/>
+        <name>NAB_approvalinfo</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	var gr = $sp.getRecord('x_235315_needabrea_needabreak');
+	if (gr == null || !gr.isValid()) {
+		data.isValid = false;
+		return;
+	}
+	
+	data.isValid = true;
+	data.isMine = gr.getValue("approver") == gs.getUserID();
+	
+	if (!data.isMine && !gr.approver.nil())
+		data.approver = gr.approver.getDisplayValue();
+	if (input && input.op) { 
+		gr.state = input.op;
+		gr.update();
+	}
+
+	var fields = $sp.getFields(gr, 'state,sys_created_on');
+
+	if (gr.sys_mod_count > 0)
+		fields.push($sp.getField(gr, 'sys_updated_on'));
+
+	data.fields = fields;
+	data.state = gr.state.toString();
+	data.sys_updated_on = gr.sys_updated_on.toString();
+	data.sys_id = gr.getUniqueValue();
+	data.table = gr.getTableName();
+	data.label = getRecordBeingApproved(gr).getLabel();
+	data.esignature = {
+		username:  gs.getUserName(),
+		userSysId: gs.getUserID(),
+		e_sig_required: checkESig(gr.getValue("source_table"))
+};
+	function checkESig(table) {
+		var esigRegistryGR = new GlideRecord("e_signature_registry");
+		if (!esigRegistryGR.isValid())
+			return false;
+			
+		esigRegistryGR.addQuery("enabled", "true");
+		esigRegistryGR.addQuery("table_name", table);
+		esigRegistryGR.query();
+		return esigRegistryGR.hasNext();
+	}
+	
+	function getRecordBeingApproved(gr) {
+		if (!gr.sysapproval.nil())
+			return gr.sysapproval.getRefRecord();
+
+		return gr.document_id.getRefRecord();
+	}
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-14 22:44:35</sys_created_on>
+        <sys_id>6e46ad8cdbbe1300f5dcaab35b961916</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>NAB_approvalinfo</sys_name>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>sp_widget_6e46ad8cdbbe1300f5dcaab35b961916</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-14 22:50:27</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-{{::c.options.color}} b">
+  <div class="panel-heading">
+    <h4 class="panel-title" ng-if="c.data.isMine && (c.data.state == 'requested')">${This {{c.data.label}} requires your approval}</h4>
+    <h4 class="panel-title" ng-if="!c.data.isMine && (c.data.state == 'requested')">${This {{c.data.label}} requires approval <span ng-if="c.data.approver"> by {{c.data.approver}}}</span></h4>
+    <h4 class="panel-title" ng-if="c.data.state == 'approved'">${Approved} <sn-time-ago timestamp="::c.data.sys_updated_on" /></h4>
+    <h4 class="panel-title" ng-if="c.data.state == 'rejected'">${Rejected} <sn-time-ago timestamp="::c.data.sys_updated_on" /></h4>
+  </div>  
+  <div class="panel-body">
+    <form ng-submit="$event.preventDefault()" class="form-horizontal">
+      <div ng-if="c.data.fields.length > 0">
+        <div ng-repeat="field in c.data.fields" class="m-b-xs" ng-if="field.value">
+          <label class="m-n">{{field.label}}</label>
+          <span ng-switch="field.type">
+            <div ng-switch-when="glide_date_time" title="{{field.display_value}}"><sn-time-ago timestamp="::field.value" /></div>
+            <div ng-switch-default >{{field.display_value}}</div>
+          </span>
+        </div>
+      </div>
+      <div ng-if="c.data.isMine && (c.data.state == 'requested')" class="question">
+        <button type="button" name="approve" class="btn btn-success btn-question" ng-click="c.action('approved')">${Approve}</button>
+        <div class="spacer"></div>
+        <button type="button" name="reject" class="btn btn-default btn-question" ng-click="c.action('rejected')">${Reject}</button>
+      </div>
+    </form>
+  
+  </div>  
+  
+</div>
+
+<p>hello</p>]]></template>
+    </sp_widget>
+</record_update>
