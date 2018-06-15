@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_grid_canvas_pane">
+    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+        <grid_canvas display_value="PA New Tab">35bfad9cdbf65300f5dcaab35b961918</grid_canvas>
+        <height>4</height>
+        <portal_widget display_value="Created 2018-06-15 11:04:15">82bfe510db3a5300f5dcaab35b9619cc</portal_widget>
+        <posx>4</posx>
+        <posy>28</posy>
+        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+        <sys_created_by>fred.luddy</sys_created_by>
+        <sys_created_on>2018-06-15 18:04:15</sys_created_on>
+        <sys_id>46bfe510db3a5300f5dcaab35b9619de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>35bfad9cdbf65300f5dcaab35b961918</sys_name>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>sys_grid_canvas_pane_46bfe510db3a5300f5dcaab35b9619de</sys_update_name>
+        <sys_updated_by>fred.luddy</sys_updated_by>
+        <sys_updated_on>2018-06-15 18:04:15</sys_updated_on>
+        <width>4</width>
+    </sys_grid_canvas_pane>
+</record_update>

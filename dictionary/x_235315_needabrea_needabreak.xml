@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="NeedaBreak" max_length="40" name="x_235315_needabrea_needabreak" sizeclass="3" type="collection">
+    <element extends="task" label="NeedaBreak" max_length="40" name="x_235315_needabrea_needabreak" sizeclass="5" type="collection">
         <element attributes="edge_encryption_enabled=true" label="Reason" max_length="40" name="u_reason" type="string"/>
         <element label="Requested End Time" mandatory="true" max_length="40" name="u_requested_end" type="glide_date_time"/>
         <element display="true" label="Requested For" max_length="32" name="u_requested_for" read_only="true" reference="sys_user" type="reference"/>

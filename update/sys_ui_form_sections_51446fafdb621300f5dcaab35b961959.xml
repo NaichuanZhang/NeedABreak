@@ -25,7 +25,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_235315_needabrea_vacation_record" name="x_235315_needabrea_vacation_record" sys_domain="global" view="Default view">51446fafdb621300f5dcaab35b961959</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_235315_needabrea_vacation_record" sys_domain="global" view="Default view">5d446fafdb621300f5dcaab35b961957</sys_ui_section>
+            <sys_ui_section caption="Time Details" display_value="Time Details" name="x_235315_needabrea_vacation_record" sys_domain="global" view="Default view">5d446fafdb621300f5dcaab35b961957</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-06-13 18:38:02</sys_updated_on>
         </sys_ui_form_section>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
+        <dashboard display_value="Need a Break dashboard">078faddcdbf65300f5dcaab35b96198c</dashboard>
+        <home>false</home>
+        <homepage display_value="My  Self Service">466f69dcdbf65300f5dcaab35b961920</homepage>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>adela.cervantsz</sys_created_by>
+        <sys_created_on>2018-06-15 18:03:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>078faddcdbf65300f5dcaab35b961991</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>078faddcdbf65300f5dcaab35b96198c</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_078faddcdbf65300f5dcaab35b961991</sys_update_name>
+        <sys_updated_by>adela.cervantsz</sys_updated_by>
+        <sys_updated_on>2018-06-15 18:03:31</sys_updated_on>
+        <tab display_value="New Tab">878faddcdbf65300f5dcaab35b96198f</tab>
+    </pa_m2m_dashboard_tabs>
+</record_update>
