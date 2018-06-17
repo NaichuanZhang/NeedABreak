@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="NABpolicy" max_length="40" name="x_235315_needabrea_nabpolicy" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="true" label="Active" max_length="40" name="u_isactive" type="boolean"/>
+        <element label="Maximum Consecutive Vacation Duration" max_length="40" name="u_maxcduration" type="glide_duration"/>
+        <element label="Maximum Vacation Duration" max_length="40" name="u_maxduration" type="glide_duration"/>
+        <element label="Process Request Duration" mandatory="true" max_length="40" name="u_processduration" type="glide_duration"/>
+    </element>
+</database>
