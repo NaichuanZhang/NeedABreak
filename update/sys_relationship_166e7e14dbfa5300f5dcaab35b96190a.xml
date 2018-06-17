@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_relationship">
+    <sys_relationship action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_235315_needabrea_needabreak</basic_apply_to>
+        <basic_query_from>sysapproval_approver</basic_query_from>
+        <insert_callback/>
+        <name>NAV_approval_relationship</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+
+	// Add your code here, such as current.addQuery(field, value);
+	current.addQuery('document_id', parent.sys_id);
+	current.addQuery('source_table', 'x_235315_needabrea_needabreak');
+})(current, parent);]]></query_with>
+        <reference_field>sysapproval</reference_field>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-15 23:52:48</sys_created_on>
+        <sys_id>166e7e14dbfa5300f5dcaab35b96190a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>NAV_approval_relationship</sys_name>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>sys_relationship_166e7e14dbfa5300f5dcaab35b96190a</sys_update_name>
+        <sys_updated_by>fred.luddy</sys_updated_by>
+        <sys_updated_on>2018-06-16 00:03:32</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="delete_multiple" query="documentkey=166e7e14dbfa5300f5dcaab35b96190a"/>
+</record_update>
