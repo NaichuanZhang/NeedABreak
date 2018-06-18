@@ -38,7 +38,7 @@
         <donut_width_percent>50</donut_width_percent>
         <end_time/>
         <exp_report_attrs>true</exp_report_attrs>
-        <field>u_string_4</field>
+        <field>u_isactive</field>
         <field_list/>
         <filter/>
         <from/>
@@ -90,25 +90,25 @@
         <show_zero>true</show_zero>
         <source_type>table</source_type>
         <start_time/>
-        <sumfield>duration</sumfield>
+        <sumfield>u_quarter_duration</sumfield>
         <sys_class_name>sys_report</sys_class_name>
         <sys_created_by>fred.luddy</sys_created_by>
         <sys_created_on>2018-06-15 18:23:21</sys_created_on>
         <sys_id>e91439d0db3a5300f5dcaab35b961963</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Total Approved Vacation Duration</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Quarter Approved Vacation Days</sys_name>
         <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
         <sys_update_name>sys_report_e91439d0db3a5300f5dcaab35b961963</sys_update_name>
-        <sys_updated_by>fred.luddy</sys_updated_by>
-        <sys_updated_on>2018-06-15 18:23:21</sys_updated_on>
-        <table>x_235315_needabrea_vacation_record</table>
-        <title>Total Approved Vacation Duration</title>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-18 21:10:07</sys_updated_on>
+        <table>x_235315_needabrea_user_vacation_profile</table>
+        <title>Quarter Approved Vacation Days</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
-        <trend_field>start_time</trend_field>
+        <trend_field/>
         <type>single_score</type>
         <upper_limit/>
         <use_color_heatmap>false</use_color_heatmap>

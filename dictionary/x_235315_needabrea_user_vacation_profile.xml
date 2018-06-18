@@ -2,6 +2,7 @@
 <database>
     <element label="User Vacation Profile" max_length="40" name="x_235315_needabrea_user_vacation_profile" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="true" label="Active" max_length="40" name="u_isactive" type="boolean"/>
         <element label="Duration This Quarter" mandatory="true" max_length="40" name="u_quarter_duration" type="glide_duration"/>
         <element label="Total Vacation Duration" mandatory="true" max_length="40" name="u_total_duration" type="glide_duration"/>
         <element label="User" mandatory="true" max_length="32" name="u_user" reference="sys_user" type="reference"/>
