@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="start_time" table="x_235315_needabrea_vacation_record">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="number" table="x_235315_needabrea_user_vacation_profile">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>ignore_filter_on_new=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -15,10 +15,10 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Start Time</column_label>
+        <column_label>Number</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>javascript:global.getNextObjNumberPadded();</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -28,15 +28,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>start_time</element>
+        <element>number</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">glide_date_time</internal_type>
-        <mandatory>true</mandatory>
+        <internal_type display_value="String">string</internal_type>
+        <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_235315_needabrea_vacation_record</name>
+        <name>x_235315_needabrea_user_vacation_profile</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -53,16 +53,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-06-13 18:31:38</sys_created_on>
-        <sys_id>6502676fdb621300f5dcaab35b96197d</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Start Time</sys_name>
+        <sys_created_on>2018-06-18 08:43:32</sys_created_on>
+        <sys_id>252c4b81db36d300f5dcaab35b9619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Number</sys_name>
         <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
-        <sys_update_name>sys_dictionary_x_235315_needabrea_vacation_record_start_time</sys_update_name>
+        <sys_update_name>sys_dictionary_x_235315_needabrea_user_vacation_profile_number</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-06-18 09:47:12</sys_updated_on>
+        <sys_updated_on>2018-06-18 08:43:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

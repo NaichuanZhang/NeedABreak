@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="f53c0b81db36d300f5dcaab35b961908" sys_domain="global" table="x_235315_needabrea_user_vacation_profile" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-18 08:51:14</sys_created_on>
+            <sys_id>daed4bc1db36d300f5dcaab35b961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_235315_needabrea_user_vacation_profile" sys_domain="global" view="Default view">f53c0b81db36d300f5dcaab35b961908</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-18 08:51:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_user</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-18 08:51:14</sys_created_on>
+            <sys_id>5eed4bc1db36d300f5dcaab35b961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_235315_needabrea_user_vacation_profile" sys_domain="global" view="Default view">f53c0b81db36d300f5dcaab35b961908</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-18 08:51:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_total_duration</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-18 08:51:14</sys_created_on>
+            <sys_id>deed4bc1db36d300f5dcaab35b961946</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_235315_needabrea_user_vacation_profile" sys_domain="global" view="Default view">f53c0b81db36d300f5dcaab35b961908</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-18 08:51:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_quarter_duration</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-18 08:51:14</sys_created_on>
+            <sys_id>52ed4bc1db36d300f5dcaab35b961947</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_235315_needabrea_user_vacation_profile" sys_domain="global" view="Default view">f53c0b81db36d300f5dcaab35b961908</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-18 08:51:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_235315_needabrea_user_vacation_profile</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-06-18 08:43:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f53c0b81db36d300f5dcaab35b961908</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_235315_needabrea_user_vacation_profile</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+            <sys_update_name>sys_ui_section_f53c0b81db36d300f5dcaab35b961908</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-06-18 08:43:49</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

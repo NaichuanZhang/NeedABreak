@@ -12,31 +12,31 @@
         <image/>
         <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>Vacation Records</mobile_title>
+        <mobile_title>User Vacation Profiles</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_235315_needabrea_vacation_record</name>
-        <order>100</order>
+        <name>x_235315_needabrea_user_vacation_profile</name>
+        <order/>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
         <roles>x_235315_needabrea.admin</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-06-13 18:28:00</sys_created_on>
+        <sys_created_on>2018-06-18 08:43:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>56f1e36fdb621300f5dcaab35b961933</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>All Vacation Records</sys_name>
+        <sys_id>952c8381db36d300f5dcaab35b961967</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>User Vacation Profiles</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
-        <sys_update_name>sys_app_module_56f1e36fdb621300f5dcaab35b961933</sys_update_name>
+        <sys_update_name>sys_app_module_952c8381db36d300f5dcaab35b961967</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-06-18 02:50:01</sys_updated_on>
+        <sys_updated_on>2018-06-18 09:38:03</sys_updated_on>
         <timeline_page/>
-        <title>All Vacation Records</title>
+        <title>User Vacation Profiles</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

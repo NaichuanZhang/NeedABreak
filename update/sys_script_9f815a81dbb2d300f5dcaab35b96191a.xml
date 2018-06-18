@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_235315_needabrea_needabreak</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Request in Advance Check</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Policy Check 
+	// Query policy table to get company rule
+	var grPT = new GlideRecord('x_235315_needabrea_nabpolicy');
+	// Get the active policy, should only have one active
+	grPT.addQuery('u_isactive', 'true');
+	grPT.query();
+	// Policy Check: Only one active policy should be allowed 
+	var count = grPT.getRowCount();
+	if (count < 1){
+		gs.addErrorMessage('No Policy is Set.');
+		current.setAbortAction(true);
+	}else if (count > 1){
+		gs.addErrorMessage('More than one policy is active.');
+		current.setAbortAction(true);
+	}
+	
+	
+	var inAdv = new GlideDuration();
+	if(grPT.next()){
+		inAdv = grPT.u_processduration;
+	}
+	
+	var startDate = new GlideDateTime(current.u_requested_start);
+	var rightnow = new GlideDateTime();
+	var ainAdv = GlideDuration(GlideDateTime.subtract(rightnow, startDate));
+	
+	// start to compare duration 
+	var dt1 = new GlideDateTime(grPT.getValue('u_processduration')); // policy duration
+	var dt2 = new GlideDateTime(ainAdv.getValue()); // actual duration
+	
+	var compDurationValue = dt1.compareTo(dt2);
+	switch(compDurationValue) {
+		case 1: 
+			gs.addErrorMessage("Please request at least 3 days before your vacation!");
+			current.setAbortAction(true);
+			break;
+		case -1: 
+			// Pass. 
+			break;
+		default:
+			// Same Duration. Pass
+			break;
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-18 05:16:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9f815a81dbb2d300f5dcaab35b96191a</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name>Request in Advance Check</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>sys_script_9f815a81dbb2d300f5dcaab35b96191a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-18 08:06:39</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=9f815a81dbb2d300f5dcaab35b96191a"/>
+</record_update>

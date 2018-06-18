@@ -12,14 +12,14 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_235315_needabrea_needabreak</collection>
+        <collection>x_235315_needabrea_vacation_record</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Check for overlapping vacation </name>
+        <name>Insert to/Update User Vacation Profile </name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,50 +29,63 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	jslog("message from scripts !!!!!!!");
+
 	// Add your code here
-	// Get the start and end date
-	var startDate = new GlideDateTime(current.u_requested_start);
-	var endDate = new GlideDateTime(current.u_requested_end);
-	// Get all approved vacation record of the user 
-	var grVR = new GlideRecord('x_235315_needabrea_vacation_record');
-	grVR.addQuery('u_user', current.u_requested_for);
-	grVR.query();
-	jslog("message from scripts !!!!!!!");
-	while(grVr.next()){
-		var astartDate = new GlideDateTime(grVR.start_time);
-		var aendDate = new GlideDateTime(grVR.end_time);
-		alert("hey");
-		if(startDate.after(astartDate)){
-			if(startDate.before(aendDate)){
-				gs.addErrorMessage("Vacation request overlap with approved vacation request");
-				current.setAbortAction(true);
-			}
-		}else{
-			if(endDate.after(astartDate)){
-				gs.addErrorMessage("Vacation request overlap with approved vacation request");
-				current.setAbortAction(true);
-			}
-		}
+	var grUP = new GlideRecord('x_235315_needabrea_user_vacation_profile');
+	
+	var duration = GlideDuration(current.duration);
+	var recordDuration = new GlideDuration();
+	grUP.addQuery('u_user', current.u_user.sys_id);
+	grUP.query();
+	if(grUP.hasNext()){
+		// User mapping already exist. Only Update.
+		grUP.next();
+		// calculate total duration
+		var timems =0;
+		var tm = 0;
+		tm = grUP.u_total_duration.dateNumericValue();
+		timems += tm;
+		tm = current.duration.dateNumericValue();
+		timems += tm;
+		grUP.u_total_duration.setDateNumericValue(timems);
+		
+		// calculate quarter duration
+		tm = grUP.u_quarter_duration.dateNumericValue();
+		timems += tm;
+		tm = current.duration.dateNumericValue();
+		timems += tm;
+		grUP.u_quarter_duration.setDateNumericValue(timems);
+		
+		// update record
+		grUP.update();
+	}else{
+		
+		// User mapping not exist. Only Insert.
+		grUP.initialize();
+		grUP.u_user = current.u_user;
+		grUP.u_total_duration = current.duration;
+		grUP.u_quarter_duration = current.duration;
+		grUP.insert();
 	}
+	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-06-15 22:52:43</sys_created_on>
+        <sys_created_on>2018-06-18 09:35:29</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>a96e6298dbba5300f5dcaab35b961999</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Check for overlapping vacation </sys_name>
+        <sys_id>1b8f0341db36d300f5dcaab35b9619f5</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Insert to/Update User Vacation Profile </sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
-        <sys_update_name>sys_script_a96e6298dbba5300f5dcaab35b961999</sys_update_name>
+        <sys_update_name>sys_script_1b8f0341db36d300f5dcaab35b9619f5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-06-15 23:15:19</sys_updated_on>
+        <sys_updated_on>2018-06-18 10:26:29</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=a96e6298dbba5300f5dcaab35b961999"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=1b8f0341db36d300f5dcaab35b9619f5"/>
 </record_update>

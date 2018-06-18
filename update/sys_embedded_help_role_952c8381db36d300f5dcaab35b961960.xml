@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_235315_needabrea.user_vacation_profile_user" name="x_235315_needabrea.user_vacation_profile_user">552c8381db36d300f5dcaab35b96195e</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-18 08:43:31</sys_created_on>
+        <sys_id>952c8381db36d300f5dcaab35b961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>552c8381db36d300f5dcaab35b96195e</sys_name>
+        <sys_package display_value="NeedaBreak" source="x_235315_needabrea">c6085ed3db221300f5dcaab35b961949</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedaBreak">c6085ed3db221300f5dcaab35b961949</sys_scope>
+        <sys_update_name>sys_embedded_help_role_952c8381db36d300f5dcaab35b961960</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-18 08:43:31</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

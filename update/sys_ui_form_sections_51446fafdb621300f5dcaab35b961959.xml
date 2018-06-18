@@ -29,20 +29,6 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-06-13 18:38:02</sys_updated_on>
         </sys_ui_form_section>
-        <sys_ui_form_section action="INSERT_OR_UPDATE">
-            <position>2</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-06-13 18:38:02</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>95446fafdb621300f5dcaab35b961991</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_overrides/>
-            <sys_ui_form display_value="x_235315_needabrea_vacation_record" name="x_235315_needabrea_vacation_record" sys_domain="global" view="Default view">51446fafdb621300f5dcaab35b961959</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="x_235315_needabrea_vacation_record" sys_domain="global" view="Default view">55446fafdb621300f5dcaab35b961958</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-06-13 18:38:02</sys_updated_on>
-        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_235315_needabrea_vacation_record</name>
             <roles/>
